@@ -27,7 +27,7 @@ regressor.variance() #return a vector of variance explained by each component
 regressor.mse() #return the mean squared error of this model 
 
 ```
-### fit(self, X, y)
+### 1. fit(self, X, y)
 Parameters:
 
 X: traning data, {array-like} of shape (n_samples, n_features) 
@@ -39,7 +39,7 @@ Returns:
 self: returns an instance of self.
 
 
-### predict(self, X)
+### 2. predict(self, X)
 Parameters:
 
 X: traning data, {array-like} of shape (n_samples, n_features) 
@@ -49,17 +49,17 @@ Returns:  {array}, predicted values (n_samples)
 self: returns an instance of self.
 
 
-### get_b(self)
+### 3. get_b(self)
  
 Returns:  {array-like},  beta coefficients for dependdent variables (n_samples, n_targets)
 
 
-### variance(self)
+### 4. variance(self)
  
 Returns:  {array},   return a vector of variance explained by each component (n_component)
 
 
-### mse(self)
+### 5. mse(self)
  
 Returns:  {float}, mean squared error
 
