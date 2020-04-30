@@ -16,13 +16,14 @@ pip install -i https://test.pypi.org/simple/ pls==1.0.1
 ## Usage
 This pacakge contains one class called PLS(the number of components needs to be set) and five methods: fit, predict, get_b, variance, and mse.
 
+All data passed into class methods are assumed to be numpy ndarray. Use read_data to prepare data . X,Y as numpy ndarray
 
 ```python
 import pls
 
 regressor=pls.PLS(n_components) #specify the number of components
 
-regressor.read_data('path','ynames') #input: data path, and column names for Y; output: prepared data (X and Y) for regression
+regressor.read_data('path',['y1','y2']) #input: data path, and column names for Y; output: prepared data (X and Y) for regression
 regressor.fit(X, Y) # 
 regressor.predict(X)# returns predicted Y given X 
 regressor.get_b() # returns B_PLS matrix, which are estimators for Y(s)
@@ -66,12 +67,12 @@ Returns:  {array-like},  beta coefficients for dependdent variables (n_samples, 
 Returns:  {array},   return a vector of variance explained by each component (n_component)
 
 
-### 5. mse(self)
+### 5. mse(self,n=self.n_components)
  
-Returns:  {float}, mean squared error
+Returns:  {float}, mean squared error when using n components to predict. Default is using all components
 
 
-self: returns an instance of self.
+
 
 ## Example
 
