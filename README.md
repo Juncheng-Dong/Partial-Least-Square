@@ -16,14 +16,24 @@ pip install -i https://test.pypi.org/simple/ pls==1.0.1
 ## Usage
 This pacakge contains one class called PLS(the number of components needs to be set) and five methods: fit, predict, get_b, variance, and mse.
 
-All data passed into class methods are assumed to be numpy ndarray. Use read_data to prepare data . X,Y as numpy ndarray
-
+All data passed into class methods are assumed to be numpy ndarray. Use **read_data** to prepare data X,Y as numpy ndarray
+```python
+import pls
+```
+It is a great that the package is installed, so let's celebrate
+```python
+pls.first_package()
+```
+Now time to import data
+```python
+X,Y=pls.read_data('data_set_path',['y1','y2'])
+```
+It reads a data set and list of column names for Y, either **excel** or **csv** and returns X and Y as numpy ndarry
 ```python
 import pls
 
 regressor=pls.PLS(n_components) #specify the number of components
 
-regressor.read_data('path',['y1','y2']) #input: data path, and column names for Y; output: prepared data (X and Y) for regression
 regressor.fit(X, Y) # 
 regressor.predict(X)# returns predicted Y given X 
 regressor.get_b() # returns B_PLS matrix, which are estimators for Y(s)
@@ -33,6 +43,26 @@ regressor.mse() #return the mean squared error of this model
 ```
 
 ## Methods
+### 1.normalize(Data)
+helper function to normalized data
+
+Parameters:
+
+Data: numpy ndarry data set to be normalized
+
+Returns: normalized numpy ndarray
+
+### 2.read_data(path,list)
+help function to read data_set as numpy ndarray
+Parameters:
+
+path: file path of data set file
+
+list: list of column names for Y 
+
+Returns: (X,Y) both numpy ndarray
+
+### Class PLS
 ### 1. fit(self, X, y)
 
 Parameters:
@@ -40,10 +70,6 @@ Parameters:
 X: traning data, {array-like} of shape (n_samples, n_features) 
 
 Y: target values, {array-like} of shape (n_samples, n_targets) 
-
-Returns:
-
-self: returns an instance of self.
 
 
 ### 2. predict(self, X)
@@ -54,7 +80,6 @@ X: traning data, {array-like} of shape (n_samples, n_features)
  
 Returns:  {array}, predicted values (n_samples)
 
-self: returns an instance of self.
 
 
 ### 3. get_b(self)
