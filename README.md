@@ -13,10 +13,10 @@ pip install pls
 ## Usage
 This pacakge contains one class called PLS(the number of components needs to be set) and six methods: read_data, fit, predict, get_b, variance, and mse.
 
-fit(self, X, y)
+1. fit(self, X, y)
 Parameters:
-X: traning data, {array-like} of shape (n_samples, n_features) 
-Y: target values, {array-like} of shape (n_samples, n_targets) 
+\\X: traning data, {array-like} of shape (n_samples, n_features) 
+\\Y: target values, {array-like} of shape (n_samples, n_targets) 
 
 Returns:
 self: returns an instance of self.
