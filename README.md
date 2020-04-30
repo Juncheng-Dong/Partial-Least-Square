@@ -20,7 +20,7 @@ All data passed into class methods are assumed to be numpy ndarray. Use **read_d
 ```python
 import pls
 ```
-It is a great that the package is installed, so let's celebrate
+It is great that the package is installed, so let's celebrate
 ```python
 pls.first_package()
 ```
