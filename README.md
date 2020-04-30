@@ -11,7 +11,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install pls.
 pip install -i https://test.pypi.org/simple/ pls==0.0.4
 ```
 ## Usage
-This pacakge contains one class called PLS(the number of components needs to be set) and six methods: read_data, fit, predict, get_b, variance, and mse.
+This pacakge contains one class called PLS(the number of components needs to be set) and five methods: fit, predict, get_b, variance, and mse.
 
 
 ```python
