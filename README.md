@@ -78,6 +78,79 @@ import pls
 import numpy as np
 ```
 
+Then, we have prepared two simulated X and Y in nd array format as our featrure data and response data
+```python
+#prepare X and Y in np array format 
+X = np.array([
+    [7,7,13,7],
+    [4,3,14,7],
+    [10,5,12,5],
+    [16,7,11,3],
+    [13,3,10,3]
+])
+
+Y=np.array(
+[
+    [14,7,8],
+    [10,7,6],
+    [8,5,5],
+    [2,4,7],
+    [6,2,4]
+])
+```
+
+Now we call the pls class as regressor and set our number of principal components to use is 4 
+
+```python
+#pre set the number of components as 4
+regressor = pls.PLS(4)
+```
+We feed our training data X and Y into this PLS model
+
+```python
+#fit the model
+regressor.fit(X,Y)
+```
+
+We can check the mean squared error, which is a scale to show the fitness of this model.
+
+```python
+#set the number of principal components as 4
+print("Mean Squared Error is:" , regressor.mse(4))
+```
+
+    Mean Squared Error is: 0.04166666666666666
+
+
+We can also get how much variances of X and Y are explained by each component.
+
+
+```python
+#get X and Y variances that are expained by PLS
+xv,yv=regressor.variance()
+```
+
+
+```python
+print(" X variance explained:\n\n", xv)
+```
+
+     X variance explained:
+    
+     [0.7045058315507844, 0.2789576859794002, 0.01653648246981553, 2.5123601249280894e-32]
+
+
+
+```python
+print(" Y variance explained:\n\n", yv)
+```
+
+     Y variance explained:
+    
+     [0.6333236475046795, 0.22063802681243821, 0.1043716590162159, 0.0007355154907388358]
+
+
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
