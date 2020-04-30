@@ -30,6 +30,7 @@ regressor.mse() #return the mean squared error of this model
 ### fit(self, X, y)
 Parameters:
 X: traning data, {array-like} of shape (n_samples, n_features) 
+
 Y: target values, {array-like} of shape (n_samples, n_targets) 
 
 Returns:
