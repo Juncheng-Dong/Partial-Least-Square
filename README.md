@@ -25,3 +25,9 @@ regressor.variance() #return a vector of variance explained by each component
 regressor.mse() #return the mean squared error of this model 
 
 ```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
