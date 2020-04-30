@@ -8,7 +8,7 @@ In this final project, we replicate the paper "PARTIAL LEAST-SQUARES REGRESSION:
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install pls.
 
 ```bash
-pip install -i https://test.pypi.org/simple/ pls==0.0.4
+pip install -i https://test.pypi.org/simple/ pls==1.0.1
 ```
 ## Usage
 This pacakge contains one class called PLS(the number of components needs to be set) and five methods: fit, predict, get_b, variance, and mse.
