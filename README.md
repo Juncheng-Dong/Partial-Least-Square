@@ -27,6 +27,8 @@ regressor.variance() #return a vector of variance explained by each component
 regressor.mse() #return the mean squared error of this model 
 
 ```
+
+## Methods
 ### 1. fit(self, X, y)
 
 Parameters:
