@@ -28,6 +28,7 @@ regressor.mse() #return the mean squared error of this model
 
 ```
 ### 1. fit(self, X, y)
+
 Parameters:
 
 X: traning data, {array-like} of shape (n_samples, n_features) 
@@ -40,6 +41,7 @@ self: returns an instance of self.
 
 
 ### 2. predict(self, X)
+
 Parameters:
 
 X: traning data, {array-like} of shape (n_samples, n_features) 
@@ -65,6 +67,9 @@ Returns:  {float}, mean squared error
 
 
 self: returns an instance of self.
+
+## Example
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
