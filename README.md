@@ -3,6 +3,9 @@
 
 In this final project, we replicate the paper "PARTIAL LEAST-SQUARES REGRESSION: A TUTORIAL", and write and test a new PLS package. 
 
+## required package
+Numpy, Pandas, Numba
+
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install pls.
