@@ -5,8 +5,23 @@ In this final project, we replicate the paper "PARTIAL LEAST-SQUARES REGRESSION:
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install pls.
 
 ```bash
 pip install pls
+```
+## Usage
+
+```python
+import pls
+
+regressor=pls.PLS(n_components) #specify the number of components
+
+regressor.read_data('path','ynames') #input: data path, and column names for Y; output: prepared data (X and Y) for regression
+regressor.fit(X, Y) # 
+regressor.predict(X)# returns predicted Y given X 
+regressor.get_b() # returns B_PLS matrix, which are estimators for Y(s)
+regressor.variance() #return a vector of variance explained by each component
+regressor.mse() #return the mean squared error of this model 
+
 ```
