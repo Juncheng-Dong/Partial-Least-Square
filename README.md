@@ -1,7 +1,7 @@
 
-# STA 663 Final Project
+# Paritial Least Square Regression
 
-In this final project, we replicate the paper "PARTIAL LEAST-SQUARES REGRESSION: A TUTORIAL", and write and test a new PLS package. 
+In this project, we replicate the paper "PARTIAL LEAST-SQUARES REGRESSION: A TUTORIAL", and write and test a new PLS package. 
 
 ## required package
 Numpy, Pandas, Numba
